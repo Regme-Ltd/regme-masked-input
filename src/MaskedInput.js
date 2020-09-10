@@ -24,6 +24,8 @@ export default {
         cut: this.cut,
         copy: this.copy,
         paste: this.paste,
+        focus: this.focus,
+        blur: this.blur
       },
     });
   },
@@ -279,6 +281,14 @@ export default {
     isEmpty() {
       if (this.maskCore === null) return true;
       return this.maskCore.getValue() === this.maskCore.emptyValue;
+    },
+
+    focus(e) {
+      this.$emit('focus', e);
+    },
+
+    blur(e) {
+      this.$emit('blur', e);
     },
 
     focusOut() {

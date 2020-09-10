@@ -25,7 +25,9 @@ export default {
         focusout: this.focusOut,
         cut: this.cut,
         copy: this.copy,
-        paste: this.paste
+        paste: this.paste,
+        focus: this.focus,
+        blur: this.blur
       }
     });
   },
@@ -128,6 +130,7 @@ export default {
                 }
               }
             }
+            /* eslint-enable */
           });
         }
         [].concat(_toConsumableArray(this.$refs.input.value)).reduce(function (memo, item) {
@@ -304,6 +307,12 @@ export default {
     isEmpty: function isEmpty() {
       if (this.maskCore === null) return true;
       return this.maskCore.getValue() === this.maskCore.emptyValue;
+    },
+    focus: function focus(e) {
+      this.$emit('focus', e);
+    },
+    blur: function blur(e) {
+      this.$emit('blur', e);
     },
     focusOut: function focusOut() {
       if (this.isEmpty()) {
