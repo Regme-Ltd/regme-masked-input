@@ -1,5 +1,5 @@
 {
-  "name": "vue-masked-input",
+  "name": "regme-masked-input",
   "description": "Masked input component for Vue.js 2.X",
   "version": "0.5.2",
   "author": "niksmr",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/niksmr/vue-masked-input.git"
+    "url": "git+https://github.com/Regme-Ltd/regme-masked-input.git"
   },
   "keywords": [
     "vue",
